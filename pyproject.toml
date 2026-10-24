@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "regression-demo"
+version = "0.1.0"
+description = "Example CI/CD pipeline: a tiny NumPy linear regression"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[tool.setuptools]
+packages = ["regression_demo"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
